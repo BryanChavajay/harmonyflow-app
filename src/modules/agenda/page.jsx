@@ -32,7 +32,7 @@ export const Agenda = () => {
       if (!response.ok) {
         console.log(jsonResponse.message);
         const message = "Algo salio mal al buscar las tares de su agenda";
-        notification.error(message);
+        toast.error(message);
         return;
       }
 
@@ -44,7 +44,7 @@ export const Agenda = () => {
       setTasks(arrayTasks);
     } catch (error) {
       console.log(error);
-      notification.error(
+      toast.error(
         "Ocurrió un problema inesperado, comuníquese con soporte"
       );
     } finally {
@@ -96,7 +96,7 @@ export const Agenda = () => {
     <LayoutWithSidebar>
       <div className="w-full flex flex-col gap-4">
         <section className="flex justify-between">
-          <p>AGENDA</p>
+          <p className="text-lg font-bold">AGENDA CON MIS TAREAS</p>
           <div className="flex flex-row gap-x-4">
             <RegisterTask
               notification={toast}

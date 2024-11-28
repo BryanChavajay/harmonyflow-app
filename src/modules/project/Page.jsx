@@ -57,7 +57,7 @@ export const Project = () => {
   return (
     <LayoutWithSidebar>
       <div className="w-full flex flex-col gap-4">
-        <section className="flex justify-between">
+        <section className="flex justify-between items-center">
           <p className="text-xl font-bold">PROYECTOS</p>
           <div className="px-4">
             <RegisterProject

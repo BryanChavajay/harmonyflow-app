@@ -75,14 +75,15 @@ export const RegisterTask = ({
       </button>
       <dialog id="modal_add_task" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Registrar Usuario!</h3>
-          <p className="">Ingrese los datos del usuario</p>
+          <h3 className="font-bold text-lg">Creando una tarea!</h3>
+          <p className="">Ingrese los datos de la tarea</p>
           <div className="w-full">
             <form
               method="dialog"
               className="flex flex-col gap-y-2 mt-2"
               onSubmit={handleSubmit(onSubmit)}
             >
+              <p>Seleccione un proyecto</p>
               <div className="w-full">
                 <Select
                   options={projects}
@@ -134,6 +135,7 @@ export const RegisterTask = ({
                 </p>
               )}
               <div className="w-full">
+                <p>Estado</p>
                 <Select
                   options={states}
                   defaultValue={states[0]}
@@ -323,8 +325,8 @@ export const EditTask = ({
       </button>
       <dialog id={`modal_edit_task_${idTask}`} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Actualizar una tarea!</h3>
-          <p className="">Ingrese los datos de la tarea</p>
+          <h3 className="font-bold text-lg">Actualizando tarea!</h3>
+          <p className="">Datos de la tarea</p>
           <div className="w-full">
             <form
               method="dialog"
@@ -332,6 +334,7 @@ export const EditTask = ({
               onSubmit={handleSubmit(onSubmit)}
             >
               <div className="w-full">
+                <p>Proyecto</p>
                 <Select
                   options={projects}
                   onChange={(selectedOption) =>
@@ -382,6 +385,7 @@ export const EditTask = ({
                 </p>
               )}
               <div className="w-full">
+                <p>Estado</p>
                 <Select
                   options={states}
                   defaultValue={states[0]}

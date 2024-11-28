@@ -165,7 +165,7 @@ export const Board = () => {
   return (
     <LayoutWithSidebar>
       <div className="w-full flex flex-col gap-4">
-        <section className="flex justify-between">
+        <section className="flex justify-between items-center">
           <p className="text-xl font-bold">Tablero de tareas</p>
           <div className="flex flex-row gap-x-4">
             <RegisterTask

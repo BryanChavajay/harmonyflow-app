@@ -406,8 +406,8 @@ export const EditProject = ({
       </button>
       <dialog id={`modal_edit_project_${idProject}`} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Registrar Usuario!</h3>
-          <p className="">Ingrese los datos del usuario</p>
+          <h3 className="font-bold text-lg">Actualizando proyecto!</h3>
+          <p className="">Datos del proyecto:</p>
           <div className="w-full">
             <form
               method="dialog"

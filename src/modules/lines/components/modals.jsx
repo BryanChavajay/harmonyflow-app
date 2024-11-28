@@ -207,8 +207,8 @@ export const EditLine = ({ resetData, notification, url, token, idLine }) => {
       </button>
       <dialog id={`modal_edit_line_${idLine}`} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Registrar Usuario!</h3>
-          <p className="">Ingrese los datos del usuario</p>
+          <h3 className="font-bold text-lg">Actualizando la linea!</h3>
+          <p className="">Datos de la linea:</p>
           <div className="w-full">
             <form
               method="dialog"

@@ -1,8 +1,25 @@
-# React + Vite
+# HARMONY FLOW - APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Harmony Flow es una aplicación destinada a la gestión de proyectos de software.
 
-Currently, two official plugins are available:
+Funciones destacadas:
+- Registro de usuarios
+- Registro de equipos de trabajo (lineas de desarrollo)
+- Registro de proyectos
+- Registro de tareas
+- Registro de horas de trabajo
+- Registro de casos de pruebas
+- Pruebas automatizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Despliegue 🚀
+Para desplegar el proyecto se deben ejecutar los siguientes comandos:
+
+1. Instala las dependencías
+```
+pnpm install
+```
+
+2. Ejecuta el servidor de desarrollo
+```
+pnpm run dev
+```

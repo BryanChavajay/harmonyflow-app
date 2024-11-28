@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const DeleteError= ({
+export const DeleteError = ({
   resetData,
   notification,
   url,
@@ -62,8 +62,10 @@ export const DeleteError= ({
       </button>
       <dialog id={`modal_delete_error${idError}`} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Actualizando error!</h3>
-          <p className="">{`¿Esta seguro de marcar el Error No ${idError} como resuelto?`}</p>
+          <h3 className="font-bold text-lg">Cerrando el error!</h3>
+          <p className="">
+            ¿Esta seguro de marcar el Error No{` ${idError} `}como resuelto?
+          </p>
           <div className="w-full">
             <form
               method="dialog"

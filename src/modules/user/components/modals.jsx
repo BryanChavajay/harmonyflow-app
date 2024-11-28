@@ -403,8 +403,8 @@ export const EditUser = ({ resetData, notification, url, token, idUser }) => {
       </button>
       <dialog id={`modal_edit_user_${idUser}`} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Registrar Usuario!</h3>
-          <p className="">Ingrese los datos del usuario</p>
+          <h3 className="font-bold text-lg">Actualizando Usuario!</h3>
+          <p className="">Datos del usuario</p>
           <div className="w-full">
             <form
               method="dialog"
