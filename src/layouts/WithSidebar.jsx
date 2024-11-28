@@ -1,11 +1,13 @@
-import { Link, useLocation, Outlet } from "react-router-dom";
+import { Link, useLocation, Outlet, useNavigate } from "react-router-dom";
 import { useStoreAuth } from "../stores/GlobalAuth.jsx";
 
 export function LayoutWithSidebar({ children }) {
+  const navigate = useNavigate();
   const location = useLocation();
 
   const user = useStoreAuth((state) => state.user);
   const permissions = useStoreAuth((state) => state.permissions);
+  const { resetAuth } = useStoreAuth();
 
   const modules = [
     { name: "MI-AGENDA", href: "/agenda" },
@@ -32,12 +34,32 @@ export function LayoutWithSidebar({ children }) {
         {/* Header */}
         <header className="bg-cyan-700/95 shadow-sm">
           <div className="flex h-16 items-center justify-between px-4">
-            <h1 className="text-xl font-bold text-white">HARMONY FLOW</h1>
+            <div className="flex items-center justify-center">
+              <img src="/harmony.svg" className="h-8"/>
+              <h1 className="text-xl font-bold text-white mx-4">HARMONY FLOW</h1>
+            </div>
             <div className="flex items-center gap-2">
-              <span className="text-white">{user}</span>
-              <button className="flex items-center justify-center rounded-md p-2 hover:bg-gray-100">
-                Flecha a bajo
-              </button>
+              <div className="dropdown">
+                <div tabIndex={0} role="button" className="btn m-1">
+                  {user}
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-base-100 rounded-box z-[1] p-2 shadow"
+                >
+                  <li>
+                    <button
+                      onClick={() => {
+                        resetAuth();
+                        localStorage.removeItem("token");
+                        navigate("/");
+                      }}
+                    >
+                      Cerra session
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </header>

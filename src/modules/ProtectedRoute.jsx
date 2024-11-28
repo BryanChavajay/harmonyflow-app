@@ -1,11 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useStoreAuth } from "../stores/GlobalAuth.jsx";
 
-export const ProtectedRoute = ({
-  children,
-  permission = "",
-  redirect = "/",
-}) => {
+export const ProtectedRoute = ({ children, permission }) => {
   const isAuthenticated = useStoreAuth((state) => state.isAuthenticated);
   const permissions = useStoreAuth((state) => state.permissions);
 
@@ -14,9 +10,8 @@ export const ProtectedRoute = ({
   );
 
   if (!(havePermission && isAuthenticated)) {
-    return <Navigate to={redirect} />;
+    return <Navigate to="/agenda" />;
   }
 
-  // Renderiza los hijos si el usuario está autenticado y tiene permiso
   return children;
 };

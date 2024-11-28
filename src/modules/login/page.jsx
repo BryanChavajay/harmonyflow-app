@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useStoreAuth } from "../../stores/GlobalAuth.jsx";
 import { useNavigate } from "react-router-dom";
+import { toast, Toaster } from "sonner";
 
 const Error = ({ message }) => {
   return (
@@ -41,9 +42,12 @@ export const Login = () => {
 
       const jsonResponse = await response.json();
 
+      let message
       if (!response.ok) {
-        return console.log(
-          jsonResponse.message || "Algo salio mal, comuniquece con soporte"
+        message = jsonResponse?.message || "Algo salio mal, comuniquece con soporte"
+        console.log(response)
+        return toast.error(
+          message
         );
       }
 
@@ -58,8 +62,10 @@ export const Login = () => {
       const jsonResponse2 = await response2.json();
 
       if (!response2.ok) {
-        return console.log(
-          jsonResponse2.message || "Algo salio mal, comuniquece con soporte"
+        message = jsonResponse2?.message || "Algo salio mal, comuniquece con soporte"
+        console.log(response2)
+        return toast.error(
+          message
         );
       }
 
@@ -68,6 +74,7 @@ export const Login = () => {
       navigate("/agenda");
     } catch (error) {
       console.log(error);
+      toast.error("Ocurrio un error interno, por favor comuniquese con soporte")
     } finally {
       setIsLoading(false);
     }
@@ -90,7 +97,7 @@ export const Login = () => {
       {/* Logo section */}
       <section className="hidden w-1/2 bg-cyan-700/95 lg:block">
         <div className="flex h-full items-center justify-center">
-          <p>Recordar colocar el logo Aca</p>
+          <img src="/harmony.svg" alt="Logo de harmony flow" className="h-96" />
         </div>
       </section>
 
@@ -183,6 +190,7 @@ export const Login = () => {
           </form>
         </div>
       </section>
+      <Toaster richColors position="top-right" />
     </div>
   );
 };
