@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve dist -s -n -L -p $PORT"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
@@ -21,6 +22,7 @@
     "react-router-dom": "6.28.0",
     "react-select": "5.8.3",
     "recharts": "^2.13.3",
+    "serve": "^14.2.4",
     "sonner": "1.7.0",
     "zustand": "5.0.1"
   },
