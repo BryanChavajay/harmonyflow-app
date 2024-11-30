@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { useStoreAuth } from "../stores/GlobalAuth.jsx";
 import { ProtectedRoute } from "./ProtectedRoute.jsx";
-import { Login } from "./login/page.jsx";
-import { Agenda } from "./agenda/page.jsx";
-import { BackLog, ViewError } from "./backlog/page.jsx";
+import { Login } from "./login/Page.jsx";
+import { Agenda } from "./agenda/Page.jsx";
+import { BackLog, ViewError } from "./backlog/Page.jsx";
 import { Board } from "./board/Page.jsx";
 import { Estadistics } from "./estadistics/Page.jsx";
 import { Lineas, LineDetail } from "./lines/Page.jsx";
 import { Project } from "./project/Page.jsx";
 import { Role } from "./role/Page.jsx";
-import { Test, CaseTest, ViewTest } from "./test/page.jsx";
+import { Test, CaseTest, ViewTest } from "./test/Page.jsx";
 import { User } from "./user/User.jsx";
 
 export const AppRouter = () => {

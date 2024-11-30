@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Calendar, dayjsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import dayjs from "dayjs";
-import { LayoutWithSidebar } from "../../layouts/WithSidebar";
+import { LayoutWithSidebar } from "../../layouts/WithSidebar.jsx";
 import { RegisterTask, RegisterHour } from "../board/components/Modals.jsx";
 import { toast, Toaster } from "sonner";
 

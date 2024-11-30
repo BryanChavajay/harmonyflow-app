@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Toaster, toast } from "sonner";
 import { useParams } from "react-router-dom";
 import { RegisterTask, RegisterHour } from "../board/components/Modals.jsx";
-import { LayoutWithSidebar } from "../../layouts/WithSidebar";
+import { LayoutWithSidebar } from "../../layouts/WithSidebar.jsx";
 import { TableTasks, TableErrors } from "./components/Table.jsx";
 import { TableCampTest } from "../test/components/Table.jsx";
 
