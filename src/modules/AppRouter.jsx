@@ -9,7 +9,7 @@ import { Board } from "./board/Page.jsx";
 import { Estadistics } from "./estadistics/Page.jsx";
 import { Lineas, LineDetail } from "./lines/Page.jsx";
 import { Project } from "./project/Page.jsx";
-import { Role } from "./role/page.jsx";
+import { Role } from "./role/Page.jsx";
 import { Test, CaseTest, ViewTest } from "./test/page.jsx";
 import { User } from "./user/User.jsx";
 
