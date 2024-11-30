@@ -118,7 +118,7 @@ export const TableCampTest = ({
       header: "Tipo de dato",
       cell: ({ row }) => (
         <p>
-          {dataTypes.find((item) => (item.id = row.original.tipo_dato)).label ||
+          {dataTypes.find((item) => (item.id == row.original.tipo_dato)).label ||
             "Desconocido"}
         </p>
       ),

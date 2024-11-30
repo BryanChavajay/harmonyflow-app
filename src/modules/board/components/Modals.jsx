@@ -62,7 +62,7 @@ export const RegisterTask = ({
   const states = [
     { value: 1, label: "EN PROGRESO" },
     { value: 2, label: "EN CURSO" },
-    { value: 1, label: "TERMINADA" },
+    { value: 3, label: "TERMINADA" },
   ];
 
   return (
@@ -276,7 +276,7 @@ export const EditTask = ({
   const states = [
     { value: 1, label: "EN PROGRESO" },
     { value: 2, label: "EN CURSO" },
-    { value: 1, label: "TERMINADA" },
+    { value: 3, label: "TERMINADA" },
   ];
 
   const getTask = async () => {
